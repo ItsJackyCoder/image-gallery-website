@@ -1,0 +1,55 @@
+$theme-color: rgb(157, 173, 159);
+
+nav {
+  background-color: $theme-color;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .titleArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  img {
+    margin-left: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    padding: 0.8rem 0rem;
+
+    color: #303030;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    li {
+      padding: 0rem 1rem;
+      a {
+        font-size: 1.3rem;
+        color: #303030;
+
+        display: inline-block;
+        cursor: pointer;
+        transition: transform 0.25s ease;
+
+        &:hover {
+          transform: scale(1.15);
+        }
+
+        &.homeLink {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+.loadMoreBtn {
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.morePicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+.morePicture button {
+  padding: 0.7rem 1rem;
+  font-size: 1.2rem;
+  color: #303030;
+  border: none;
+  border-radius: 16px;
+  background-color: rgb(157, 173, 159);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+.morePicture button:hover {
+  transform: scale(1.25);
+}
+
+nav {
+  background-color: rgb(157, 173, 159);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .titleArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  margin-left: 0.5rem;
+}
+nav h1 {
+  font-size: 1.5rem;
+  padding: 0.8rem 0rem;
+  color: #303030;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav ul li {
+  padding: 0rem 1rem;
+}
+nav ul li a {
+  font-size: 1.3rem;
+  color: #303030;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+nav ul li a:hover {
+  transform: scale(1.15);
+}
+nav ul li a.homeLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+.search .searchBox {
+  display: flex;
+  align-items: center;
+  width: min(100%, 760px);
+  background-color: #f5f5f5;
+  border-radius: 16px;
+  padding: 0.2rem 0.8rem 0.2rem 1rem;
+}
+.search .searchBox:focus-within {
+  outline: 2px solid rgb(157, 173, 159);
+}
+.search .searchBox input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  color: #333;
+}
+.search .searchBox input::-moz-placeholder {
+  color: #aaa;
+}
+.search .searchBox input::placeholder {
+  color: #aaa;
+}
+.search .searchBox button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.search .searchBox button:hover {
+  transform: scale(1.12);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+  font-size: 1.2rem;
+  background-color: rgb(157, 173, 159);
+  min-height: 10vh;
+}
+
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.pictures .picture {
+  width: 100%;
+  padding: 0;
+}
+.pictures .picture .imageContainer {
+  overflow: hidden;
+  height: 40vh;
+  position: relative;
+}
+.pictures .picture .imageContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.5s ease;
+}
+.pictures .picture .imageContainer img:hover {
+  transform: scale(1.1);
+}
+.pictures .picture .imageContainer .favoriteButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: #303030;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.pictures .picture .imageContainer .favoriteButton:hover {
+  transform: scale(1.15);
+  background: white;
+}
+.pictures .picture .imageContainer .favoriteButton.isFavorite {
+  color: #b04a4a;
+  background: white;
+}
+.pictures .picture .photoDescription {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.3rem;
+  line-height: 24px;
+}
+.pictures .picture .photoDescription a {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.pictures .picture .photoDescription a:hover {
+  transform: scale(1.25);
+}/*# sourceMappingURL=style.css.map */

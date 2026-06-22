@@ -1,0 +1,48 @@
+.search {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+
+  .searchBox {
+    display: flex;
+    align-items: center;
+    width: min(100%, 760px);
+    background-color: #f5f5f5;
+    border-radius: 16px;
+    padding: 0.2rem 0.8rem 0.2rem 1rem;
+
+    &:focus-within {
+      outline: 2px solid $theme-color;
+    }
+
+    input {
+      flex: 1;
+      min-width: 0;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-size: 1.2rem;
+      padding: 1rem 0;
+      color: #333;
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      font-size: 1.4rem;
+      padding: 0.5rem;
+
+      cursor: pointer;
+
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.12);
+      }
+    }
+  }
+}

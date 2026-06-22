@@ -1,0 +1,12 @@
+$theme-color: rgb(157, 173, 159);
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding-right: 1rem;
+  font-size: 1.2rem;
+  background-color: $theme-color;
+  min-height: 10vh;
+}
