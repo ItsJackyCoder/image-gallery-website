@@ -25,5 +25,4 @@ yarn-error.log*
 
 //我自己新增的
 .env
-assets
 _redirect
