@@ -25,7 +25,7 @@ const Picture = ({ data, isFavorite, toggleFavorite }) => {
       <div className="photoDescription">
         <p>{data.photographer}</p>
 
-        <a target="_blank" href={data.src.large}>
+        <a target="_blank" href={data.src.large} rel="noreferrer">
           Download
         </a>
       </div>

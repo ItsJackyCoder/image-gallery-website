@@ -64,6 +64,7 @@ const Homepage = ({ favoritePhotos, toggleFavorite }) => {
   //初載頁面!
   //只要Homepage.js有被render,我們就要去生成圖片(也就是執行search())
   //所以一進到我們的網站自然就會看到圖片生成拉!
+  //eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const getInitialPictures = async () => {
       const result = await axios.get(initialURL, {
