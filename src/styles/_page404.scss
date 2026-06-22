@@ -1,0 +1,172 @@
+.page404 {
+  min-height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  isolation: isolate;
+
+  .brokenFrameBg {
+    width: clamp(18rem, 48vw, 34rem);
+    aspect-ratio: 4 / 3;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+
+    border: 0.55rem solid rgba(157, 173, 159, 0.3);
+    border-radius: 1rem;
+    background-color: transparent;
+
+    pointer-events: none;
+
+    animation: frameFloat 4s ease-in-out infinite;
+  }
+
+  .page404Content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .errorCode {
+    font-size: clamp(6rem, 18vw, 12rem);
+    font-weight: 700;
+    color: rgb(157, 173, 159);
+    line-height: 1;
+  }
+
+  h2 {
+    margin: 1rem 0 0.5rem;
+    font-size: 2rem;
+    color: #303030;
+  }
+
+  p {
+    color: #666;
+  }
+
+  .backHomeBtn {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+
+    background-color: rgb(157, 173, 159);
+    color: #303030;
+    text-decoration: none;
+
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .crack {
+    position: absolute;
+    height: 0.13rem;
+    border-radius: 99px;
+
+    background: linear-gradient(
+      to right,
+      rgba(48, 48, 48, 0.08),
+      rgba(48, 48, 48, 0.28)
+    );
+
+    transform-origin: left center;
+    box-shadow: 0 0 0.15rem rgba(48, 48, 48, 0.08);
+  }
+
+  //共同裂點:約在相框中間偏上
+  .crackMain {
+    width: 21%;
+    height: 0.18rem;
+    top: 43%;
+    left: 52%;
+    transform: rotate(128deg);
+  }
+
+  //從共同裂點往右上
+  .crackTopRight {
+    width: 15%;
+    top: 43%;
+    left: 52%;
+    transform: rotate(-38deg);
+  }
+
+  //從共同裂點往左上
+  .crackTopLeft {
+    width: 20%;
+    top: 43%;
+    left: 52%;
+    transform: rotate(-170deg);
+  }
+
+  //從共同裂點往右下
+  .crackBottomRight {
+    width: 25%;
+    top: 43%;
+    left: 52%;
+    transform: rotate(50deg);
+  }
+
+  //接在主裂痕尾端,再往左下分岔
+  .crackLeftFork {
+    width: 25%;
+    top: 65%;
+    left: 39%;
+    transform: rotate(150deg);
+  }
+
+  //接在主裂痕尾端,往下延伸
+  .crackBottomFork {
+    width: 20%;
+    top: 65%;
+    left: 39%;
+    transform: rotate(80deg);
+  }
+
+  //接在右上裂痕尾端,再往上分岔
+  .crackTopFork {
+    width: 15%;
+    top: 31%;
+    left: 64%;
+    transform: rotate(-90deg);
+  }
+}
+
+// @keyframes frameFloat {
+//   0%,
+//   100% {
+//     transform: translate(-50%, -50%) rotate(-3deg) translateY(0);
+//   }
+
+//   50% {
+//     transform: translate(-50%, -50%) rotate(-3deg) translateY(-0.5rem);
+//   }
+// }
+
+@keyframes frameFloat {
+  0% {
+    transform: translate(-50%, -50%) rotate(-3deg) translateY(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-3deg) translateY(0);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-3deg) translateY(-0.5rem);
+  }
+}

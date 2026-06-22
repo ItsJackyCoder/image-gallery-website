@@ -203,4 +203,126 @@ nav ul li a.homeLink {
 }
 .pictures .picture .photoDescription a:hover {
   transform: scale(1.25);
+}
+
+.page404 {
+  min-height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+}
+.page404 .brokenFrameBg {
+  width: clamp(18rem, 48vw, 34rem);
+  aspect-ratio: 4/3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  border: 0.55rem solid rgba(157, 173, 159, 0.3);
+  border-radius: 1rem;
+  background-color: transparent;
+  pointer-events: none;
+  animation: frameFloat 4s ease-in-out infinite;
+}
+.page404 .page404Content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.page404 .errorCode {
+  font-size: clamp(6rem, 18vw, 12rem);
+  font-weight: 700;
+  color: rgb(157, 173, 159);
+  line-height: 1;
+}
+.page404 h2 {
+  margin: 1rem 0 0.5rem;
+  font-size: 2rem;
+  color: #303030;
+}
+.page404 p {
+  color: #666;
+}
+.page404 .backHomeBtn {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: rgb(157, 173, 159);
+  color: #303030;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.page404 .backHomeBtn:hover {
+  transform: scale(1.1);
+}
+.page404 .crack {
+  position: absolute;
+  height: 0.13rem;
+  border-radius: 99px;
+  background: linear-gradient(to right, rgba(48, 48, 48, 0.08), rgba(48, 48, 48, 0.28));
+  transform-origin: left center;
+  box-shadow: 0 0 0.15rem rgba(48, 48, 48, 0.08);
+}
+.page404 .crackMain {
+  width: 21%;
+  height: 0.18rem;
+  top: 43%;
+  left: 52%;
+  transform: rotate(128deg);
+}
+.page404 .crackTopRight {
+  width: 15%;
+  top: 43%;
+  left: 52%;
+  transform: rotate(-38deg);
+}
+.page404 .crackTopLeft {
+  width: 20%;
+  top: 43%;
+  left: 52%;
+  transform: rotate(-170deg);
+}
+.page404 .crackBottomRight {
+  width: 25%;
+  top: 43%;
+  left: 52%;
+  transform: rotate(50deg);
+}
+.page404 .crackLeftFork {
+  width: 25%;
+  top: 65%;
+  left: 39%;
+  transform: rotate(150deg);
+}
+.page404 .crackBottomFork {
+  width: 20%;
+  top: 65%;
+  left: 39%;
+  transform: rotate(80deg);
+}
+.page404 .crackTopFork {
+  width: 15%;
+  top: 31%;
+  left: 64%;
+  transform: rotate(-90deg);
+}
+
+@keyframes frameFloat {
+  0% {
+    transform: translate(-50%, -50%) rotate(-3deg) translateY(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-3deg) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-3deg) translateY(-0.5rem);
+  }
 }/*# sourceMappingURL=style.css.map */

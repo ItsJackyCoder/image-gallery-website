@@ -64,10 +64,11 @@ function App() {
               />
             }
           ></Route>
-
-          {/* 其他所有的request都會進到這個route */}
-          <Route path="*" element={<Page404 />}></Route>
         </Route>
+
+        {/* 其他所有的request都會進到這個route */}
+        {/* 我把它移出Layout那個route,這樣就不會套用它設定的版型 */}
+        <Route path="*" element={<Page404 />}></Route>
       </Routes>
     </BrowserRouter>
   );
