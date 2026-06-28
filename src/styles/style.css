@@ -6,10 +6,13 @@
 
 body,
 .loadMoreBtn {
-  font-family: "Overpass", sans-serif;
-  font-optical-sizing: auto;
+  font-family: "Yeon Sung", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+input {
+  font-family: inherit;
 }
 
 a {
@@ -51,6 +54,12 @@ nav .titleArea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
+}
+nav .titleArea h1 {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 nav img {
   margin-left: 0.5rem;
@@ -316,10 +325,7 @@ nav ul li a.homeLink {
 }
 
 @keyframes frameFloat {
-  0% {
-    transform: translate(-50%, -50%) rotate(-3deg) translateY(0);
-  }
-  100% {
+  0%, 100% {
     transform: translate(-50%, -50%) rotate(-3deg) translateY(0);
   }
   50% {

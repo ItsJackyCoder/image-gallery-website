@@ -2,20 +2,23 @@ import React, { useState, useEffect } from "react";
 import Search from "../components/Search";
 import axios from "axios";
 import Picture from "../components/Picture";
+import { useLocation } from "react-router-dom";
 
 const Homepage = ({ favoritePhotos, toggleFavorite }) => {
-  let [input, setInput] = useState("");
+  const [input, setInput] = useState("");
 
   //把圖片做成state-->因為要讓Search.js和Picture.js都可以使用,所以做了state lifting
-  let [data, setData] = useState(null);
+  const [data, setData] = useState(null);
 
   //按下「更多圖片」時(已有在search欄位裡打上文字),要更改page的值(url後面的參數),以索取
   //更多相關的圖片
-  let [page, setPage] = useState(Math.floor(Math.random() * 5) + 1);
+  const [page, setPage] = useState(Math.floor(Math.random() * 5) + 1);
 
   //取得「更多圖片」時,所用的state!
   //為了避免user在搜尋窗上打文字後,直接按「更多圖片」以產生搜尋窗上所打文字的圖片
-  let [currentSearch, setCurrentSearch] = useState("");
+  const [currentSearch, setCurrentSearch] = useState("");
+
+  const location = useLocation();
 
   const auth = process.env.REACT_APP_PEXELS_API_KEY;
 
@@ -80,9 +83,39 @@ const Homepage = ({ favoritePhotos, toggleFavorite }) => {
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    const getInitialPictures = async () => {
+      //回首頁時,清空搜尋狀態
+      setInput("");
+      setCurrentSearch("");
+
+      //重新隨機選一個精選圖片頁數
+      const randomPage = Math.floor(Math.random() * 5) + 1;
+      setPage(randomPage);
+
+      const url = `https://api.pexels.com/v1/curated?page=${randomPage}&per_page=16`;
+
+      try {
+        const result = await axios.get(url, {
+          headers: { Authorization: auth },
+        });
+
+        setData(result.data.photos);
+      } catch (error) {
+        console.log("圖片載入失敗：", error);
+      }
+    };
+
+    getInitialPictures();
+
+    //location.key每次點擊Link導覽時會更新
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.key]);
+
   return (
     <div style={{ minHeight: "100vh" }}>
       <Search
+        input={input}
         search={() => {
           search(searchURL);
         }}
@@ -109,7 +142,7 @@ const Homepage = ({ favoritePhotos, toggleFavorite }) => {
 
       <div className="morePicture">
         <button className="loadMoreBtn" type="button" onClick={morePicture}>
-          Load More
+          더 보기
         </button>
       </div>
     </div>

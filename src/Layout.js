@@ -12,7 +12,8 @@ const Layout = () => {
           <img src={titleIcon} alt="" width="50px" height="50px" />
 
           <h1 aria-label="Title" title="Title">
-            ——Image Gallery——
+            {"    "}
+            Image Gallery
           </h1>
         </div>
 
@@ -24,7 +25,7 @@ const Layout = () => {
           </li>
 
           <li>
-            <Link to="/favorite">Favorites</Link>
+            <Link to="/favorite">찜한 사진</Link>
           </li>
         </ul>
       </nav>

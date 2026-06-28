@@ -1,6 +1,6 @@
 import React from "react";
 
-const Search = ({ search, setInput }) => {
+const Search = ({ search, setInput, input }) => {
   const inputHandler = (e) => {
     setInput(e.target.value);
   };
@@ -13,8 +13,9 @@ const Search = ({ search, setInput }) => {
     <div className="search">
       <form className="searchBox" onSubmit={submitHandler}>
         <input
+          value={input}
           type="text"
-          placeholder="Search free photos"
+          placeholder="사진을 검색해 보세요"
           onChange={inputHandler}
         />
 

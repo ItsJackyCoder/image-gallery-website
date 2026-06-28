@@ -10,11 +10,14 @@ body,
 .loadMoreBtn {
   //font-family: "Roboto", sans-serif;
 
-  //google font
-  font-family: "Overpass", sans-serif;
-  font-optical-sizing: auto;
+  //google font(korean)
+  font-family: "Yeon Sung", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+input {
+  font-family: inherit;
 }
 
 a {
