@@ -31,8 +31,8 @@
 
 #### 圖片收藏頁面:
 
-![](docs/images/favorite-photo.png)
+![](docs/images/favorite-photos.png)
 
 #### 錯誤頁面:
 
-![](docs/images/instructor-course-page.png)
+![](docs/images/page404.png)
