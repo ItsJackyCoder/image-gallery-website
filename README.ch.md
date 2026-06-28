@@ -17,22 +17,22 @@
 - 外部 API：`Pexels API`
 
 
-## 畫面展示
+## 頁面預覽
 
-#### 首頁:
+#### 首頁畫面:
 
 ![](docs/images/homepage1.png)
 
 ![](docs/images/homepage2.png)
 
-#### 搜尋圖片頁面:
+#### 圖片搜尋頁面:
 
 ![](docs/images/search-page.png)
 
-#### 圖片收藏頁面:
+#### 我的收藏頁面:
 
 ![](docs/images/favorite-photos.png)
 
-#### 錯誤頁面:
+#### 404 錯誤頁面:
 
 ![](docs/images/page404.png)
