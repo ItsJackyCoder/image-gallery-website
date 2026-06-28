@@ -17,11 +17,13 @@ const Page404 = () => {
       {/* 真正顯示在前面的內容 */}
       <div className="page404Content">
         <p className="errorCode">404</p>
-        <h2>Photo not found</h2>
-        <p>Oops! The page you are looking for does not exist.</p>
+        <h2>페이지를 찾을 수 없습니다.</h2>
+        <p>
+          입력하신 주소가 잘못되었거나, 페이지가 이동 또는 삭제되었을 수 있어요.
+        </p>
 
         <Link to="/" className="backHomeBtn">
-          Back to Home
+          홈으로 돌아가기
         </Link>
       </div>
     </main>
