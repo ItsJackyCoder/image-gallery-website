@@ -13,7 +13,6 @@
 ## 技術堆疊
 
 - 前端:`JavaScript`, `HTML`, `CSS`, `React`, `React Router DOM`, `JSX`
-- 資料庫:`MongoDB Atlas`, `Mongoose`
 - 部署平台: `Netlify`
 - 外部 API：`Pexels API`
 
